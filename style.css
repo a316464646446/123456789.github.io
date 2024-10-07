@@ -1,0 +1,117 @@
+@font-face {
+  font-family: 'YYReset';
+  src: url('./YYReset.otf') format('opentype');
+}
+
+body {
+  color: #ffffff;
+  font-size: 15px;
+}
+
+* {
+  text-align: center;
+}
+
+button {
+  background: #404040;
+}
+
+.y > mrow {
+  font-size: 20px;
+}
+
+.choose {
+  height: 30px;
+}
+
+[name="y2n"], [name="y2ng"], [name="yb"], [name="ys"] {
+  background: red;
+  color: #ff8080;
+  font-size: 15px;
+}
+
+[name="option"], [name="about"], [name="achievement"], [name="recommendation"] {
+  background: black;
+  color: #808080;
+  font-size: 15px;
+}
+
+.ym {
+  color: #707070;
+}
+
+.max, .stop {
+  color: #ffffff;
+}
+
+.y2 {
+  color: #f0f0f0;
+}
+
+.y4 {
+  color: #e0e0e0;
+}
+
+.y8 {
+  color: #d0d0d0;
+}
+
+.y16 {
+  color: #c0c0c0;
+}
+
+.y32 {
+  color: #b0b0b0;
+}
+
+.y64 {
+  color: #a0a0a0;
+}
+
+.y128 {
+  color: #909090;
+}
+
+.y256 {
+  color: #808080;
+}
+
+button.z {
+  background: #ff0000;
+}
+
+.z {
+  color: #ff8080;
+}
+
+.ba0, .ba1 {
+  color: #ffffff;
+}
+
+.changelog {
+  color: #8000ff;
+}
+
+.achievement {
+  color: #8080ff;
+}
+
+.msg {
+  color: #0000ff;
+}
+
+table {
+  display: inline;
+}
+
+td {
+  background: #404040;
+  color: #ffffff;
+  font-size: 10px;
+  height: 75px;
+  width: 75px;
+}
+
+.recommendation {
+  color: #ff80ff;
+}

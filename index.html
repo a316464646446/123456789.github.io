@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YY重置</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="mspace.js"></script>
+  <script type="text/javascript" src="ExpantaNum.js"></script>
+  <script type="text/javascript" src="files/load.js"></script>
+  <script type="text/javascript" src="files/y2ng.js"></script>
+  <script type="text/javascript" src="files/ybasic.js"></script>
+  <script type="text/javascript" src="files/yshop.js"></script>
+  <script type="text/javascript" src="files/other.js"></script>
+  <script type="text/javascript" src="files/display.js"></script>
+</head>
+<body style="background: #000000;">
+  <p class="head">
+    <math display="block" class="y">
+      <mo style="font-family: 'YYReset';">你已经游玩了</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <mo style="font-family: 'YYReset';">秒</mo>
+    </math>
+    <math display="block" class="y">
+      <mo style="font-family: 'YYReset';">你有</mo>
+      <mrow><mn>2.00</mn></mrow>
+      <mi>y</mi>
+    </math>
+    <math display="block" class="yget">
+      <mo style="font-family: 'YYReset';">你每秒获得</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <mi>y</mi>
+    </math>
+  </p>
+  <p class="choose1">
+    <button name="y2n" type="button" class="choose" onmousedown="choose = [0, 0]">
+      <math display="block">
+          <msup>
+            <mi>y</mi>
+            <msup>
+              <mn>2</mn>
+              <mi>n</mi>
+            </msup>
+          </msup>
+      </math>
+    </button>
+    <button name="option" type="button" class="choose" onmousedown="choose = [8, 0]">
+      <math display="block">
+        <mo style="font-family: 'YYReset';">选项</mo>
+      </math>
+    </button>
+  </p>
+  <p class="choose2">
+    <button name="y2ng" type="button" class="choose" onmousedown="choose[1] = 0">
+      <math display="block">
+        <msup>
+          <mi>y</mi>
+          <msup>
+            <mn>2</mn>
+            <mi>n</mi>
+          </msup>
+        </msup>
+        <mo style="font-family: 'YYReset';">生成器</mo>
+      </math>
+    </button>
+    <button name="yb" type="button" class="choose" onmousedown="choose[1] = 1">
+      <math display="block">
+        <mi>y</mi>
+        <mo style="font-family: 'YYReset';">基础</mo>
+      </math>
+    </button>
+  </p>
+  <p class="main">
+    <math display="block" class="ym">
+      <mo style="font-family: 'YYReset';">每次购买乘数</mo><mo>:</mo>
+      <msup>
+        <mn>2</mn>
+        <mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow>
+      </msup>
+      <mo>=</mo>
+      <mrow><mn>1.68</mn></mrow>
+    </math>
+    <br>
+    <button name="max" type="button" class="max" onmousedown="buy_y2ng_max_all()">
+      <math>
+        <mo style="font-family: 'YYReset';">全部购买最大</mo>
+        <mo>(</mo><mo style="font-family: 'YYReset';">快捷键</mo><mo>:</mo>
+        <mo>M</mo><mo>)</mo>
+      </math>
+    </button>
+    <math display="block" class="y2">
+      <mo style="font-family: 'YYReset';">你有</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <msup>
+        <mi>y</mi>
+        <mn>2</mn>
+      </msup>
+      <mo style="font-family: 'YYReset';">生成器，等级为</mo>
+      <mrow><mn>0</mn></mrow>
+      <mo style="font-family: 'YYReset';">，每秒生成</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <mo>×</mo>
+      <mrow><mn>0.25</mn></mrow>
+      <mi>y</mi>
+      <mo>=</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <mi>y</mi>
+    </math>
+    <button name="buy" type="button" class="y2" onmousedown="buy_y2ng(1)">
+      <math>
+        <mo style="font-family: 'YYReset';">购买一个</mo>
+        <msup>
+          <mi>y</mi>
+          <mn>2</mn>
+        </msup>
+        <mo style="font-family: 'YYReset';">生成器，花费</mo>
+        <mrow><mn>2.00</mn></mrow>
+        <mi>y</mi>
+      </math>
+    </button>
+    <button name="buymax" type="button" class="y2" onmousedown="buy_y2ng_max(1)">
+      <math>
+        <mo style="font-family: 'YYReset';">购买最大</mo>
+      </math>
+    </button>
+    <math display="block" class="y4">
+      <mo style="font-family: 'YYReset';">你有</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <msup>
+        <mi>y</mi>
+        <mn>4</mn>
+      </msup>
+      <mo style="font-family: 'YYReset';">生成器，等级为</mo>
+      <mrow><mn>0</mn></mrow>
+      <mo style="font-family: 'YYReset';">，每秒生成</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <mo>×</mo>
+      <mrow><mn>0.25</mn></mrow>
+      <msup>
+        <mi>y</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>=</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <msup>
+        <mi>y</mi>
+        <mn>2</mn>
+      </msup>
+    </math>
+    <button name="buy" type="button" class="y4" onmousedown="buy_y2ng(2)">
+      <math>
+        <mo style="font-family: 'YYReset';">购买一个</mo>
+        <msup>
+          <mi>y</mi>
+          <mn>4</mn>
+        </msup>
+        <mo style="font-family: 'YYReset';">生成器，花费</mo>
+        <mrow><mn>4.00</mn></mrow>
+        <mi>y</mi>
+      </math>
+    </button>
+    <button name="buymax" type="button" class="y4" onmousedown="buy_y2ng_max(2)">
+      <math>
+        <mo style="font-family: 'YYReset';">购买最大</mo>
+      </math>
+    </button>
+    <math display="block" class="y8">
+      <mo style="font-family: 'YYReset';">你有</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <msup>
+        <mi>y</mi>
+        <mn>8</mn>
+      </msup>
+      <mo style="font-family: 'YYReset';">生成器，等级为</mo>
+      <mrow><mn>0</mn></mrow>
+      <mo style="font-family: 'YYReset';">，每秒生成</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <mo>×</mo>
+      <mrow><mn>0.25</mn></mrow>
+      <msup>
+        <mi>y</mi>
+        <mn>4</mn>
+      </msup>
+      <mo>=</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <msup>
+        <mi>y</mi>
+        <mn>4</mn>
+      </msup>
+    </math>
+    <button name="buy" type="button" class="y8" onmousedown="buy_y2ng(3)">
+      <math>
+        <mo style="font-family: 'YYReset';">购买一个</mo>
+        <msup>
+          <mi>y</mi>
+          <mn>8</mn>
+        </msup>
+        <mo style="font-family: 'YYReset';">生成器，花费</mo>
+        <mrow><mn>16.00</mn></mrow>
+        <mi>y</mi>
+      </math>
+    </button>
+    <button name="buymax" type="button" class="y8" onmousedown="buy_y2ng_max(3)">
+      <math>
+        <mo style="font-family: 'YYReset';">购买最大</mo>
+      </math>
+    </button>
+    <math display="block" class="y16">
+      <mo style="font-family: 'YYReset';">你有</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <msup>
+        <mi>y</mi>
+        <mn>16</mn>
+      </msup>
+      <mo style="font-family: 'YYReset';">生成器，等级为</mo>
+      <mrow><mn>0</mn></mrow>
+      <mo style="font-family: 'YYReset';">，每秒生成</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <mo>×</mo>
+      <mrow><mn>0.25</mn></mrow>
+      <msup>
+        <mi>y</mi>
+        <mn>8</mn>
+      </msup>
+      <mo>=</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <msup>
+        <mi>y</mi>
+        <mn>8</mn>
+      </msup>
+    </math>
+    <button name="buy" type="button" class="y16" onmousedown="buy_y2ng(4)">
+      <math>
+        <mo style="font-family: 'YYReset';">购买一个</mo>
+        <msup>
+          <mi>y</mi>
+          <mn>16</mn>
+        </msup>
+        <mo style="font-family: 'YYReset';">生成器，花费</mo>
+        <mrow><mn>256.00</mn></mrow>
+        <mi>y</mi>
+      </math>
+    </button>
+    <button name="buymax" type="button" class="y16" onmousedown="buy_y2ng_max(4)">
+      <math>
+        <mo style="font-family: 'YYReset';">购买最大</mo>
+      </math>
+    </button>
+    <math display="block" class="y32">
+      <mo style="font-family: 'YYReset';">你有</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <msup>
+        <mi>y</mi>
+        <mn>32</mn>
+      </msup>
+      <mo style="font-family: 'YYReset';">生成器，等级为</mo>
+      <mrow><mn>0</mn></mrow>
+      <mo style="font-family: 'YYReset';">，每秒生成</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <mo>×</mo>
+      <mrow><mn>0.25</mn></mrow>
+      <msup>
+        <mi>y</mi>
+        <mn>16</mn>
+      </msup>
+      <mo>=</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <msup>
+        <mi>y</mi>
+        <mn>16</mn>
+      </msup>
+    </math>
+    <button name="buy" type="button" class="y32" onmousedown="buy_y2ng(5)">
+      <math>
+        <mo style="font-family: 'YYReset';">购买一个</mo>
+        <msup>
+          <mi>y</mi>
+          <mn>32</mn>
+        </msup>
+        <mo style="font-family: 'YYReset';">生成器，花费</mo>
+        <mrow><mn>65,536</mn></mrow>
+        <mi>y</mi>
+      </math>
+    </button>
+    <button name="buymax" type="button" class="y32" onmousedown="buy_y2ng_max(5)">
+      <math>
+        <mo style="font-family: 'YYReset';">购买最大</mo>
+      </math>
+    </button>
+    <math display="block" class="y64">
+      <mo style="font-family: 'YYReset';">你有</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <msup>
+        <mi>y</mi>
+        <mn>64</mn>
+      </msup>
+      <mo style="font-family: 'YYReset';">生成器，等级为</mo>
+      <mrow><mn>0</mn></mrow>
+      <mo style="font-family: 'YYReset';">，每秒生成</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <mo>×</mo>
+      <mrow><mn>0.25</mn></mrow>
+      <msup>
+        <mi>y</mi>
+        <mn>32</mn>
+      </msup>
+      <mo>=</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <msup>
+        <mi>y</mi>
+        <mn>32</mn>
+      </msup>
+    </math>
+    <button name="buy" type="button" class="y64" onmousedown="buy_y2ng(6)">
+      <math>
+        <mo style="font-family: 'YYReset';">购买一个</mo>
+        <msup>
+          <mi>y</mi>
+          <mn>64</mn>
+        </msup>
+        <mo style="font-family: 'YYReset';">生成器，花费</mo>
+        <mrow>
+          <mn>4.294</mn>
+          <mo>×</mo>
+          <msup>
+            <mn>10</mn>
+            <mn>9</mn>
+          </msup>
+        </mrow>
+        <mi>y</mi>
+      </math>
+    </button>
+    <button name="buymax" type="button" class="y64" onmousedown="buy_y2ng_max(6)">
+      <math>
+        <mo style="font-family: 'YYReset';">购买最大</mo>
+      </math>
+    </button>
+    <math display="block" class="y128">
+      <mo style="font-family: 'YYReset';">你有</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <msup>
+        <mi>y</mi>
+        <mn>128</mn>
+      </msup>
+      <mo style="font-family: 'YYReset';">生成器，等级为</mo>
+      <mrow><mn>0</mn></mrow>
+      <mo style="font-family: 'YYReset';">，每秒生成</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <mo>×</mo>
+      <mrow><mn>0.25</mn></mrow>
+      <msup>
+        <mi>y</mi>
+        <mn>64</mn>
+      </msup>
+      <mo>=</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <msup>
+        <mi>y</mi>
+        <mn>64</mn>
+      </msup>
+    </math>
+    <button name="buy" type="button" class="y128" onmousedown="buy_y2ng(7)">
+      <math>
+        <mo style="font-family: 'YYReset';">购买一个</mo>
+        <msup>
+          <mi>y</mi>
+          <mn>128</mn>
+        </msup>
+        <mo style="font-family: 'YYReset';">生成器，花费</mo>
+        <mrow>
+          <mn>1.844</mn>
+          <mo>×</mo>
+          <msup>
+            <mn>10</mn>
+            <mn>19</mn>
+          </msup>
+        </mrow>
+        <mi>y</mi>
+      </math>
+    </button>
+    <button name="buymax" type="button" class="y128" onmousedown="buy_y2ng_max(7)">
+      <math>
+        <mo style="font-family: 'YYReset';">购买最大</mo>
+      </math>
+    </button>
+    <math display="block" class="y256">
+      <mo style="font-family: 'YYReset';">你有</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <msup>
+        <mi>y</mi>
+        <mn>256</mn>
+      </msup>
+      <mo style="font-family: 'YYReset';">生成器，等级为</mo>
+      <mrow><mn>0</mn></mrow>
+      <mo style="font-family: 'YYReset';">，每秒生成</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <mo>×</mo>
+      <mrow><mn>0.25</mn></mrow>
+      <msup>
+        <mi>y</mi>
+        <mn>128</mn>
+      </msup>
+      <mo>=</mo>
+      <mrow><mn>0.00</mn></mrow>
+      <msup>
+        <mi>y</mi>
+        <mn>128</mn>
+      </msup>
+    </math>
+    <button name="buy" type="button" class="y256" onmousedown="buy_y2ng(8)">
+      <math>
+        <mo style="font-family: 'YYReset';">购买一个</mo>
+        <msup>
+          <mi>y</mi>
+          <mn>256</mn>
+        </msup>
+        <mo style="font-family: 'YYReset';">生成器，花费</mo>
+        <mrow>
+          <mn>3.402</mn>
+          <mo>×</mo>
+          <msup>
+            <mn>10</mn>
+            <mn>38</mn>
+          </msup>
+        </mrow>
+        <mi>y</mi>
+      </math>
+    </button>
+    <button name="buymax" type="button" class="y256" onmousedown="buy_y2ng_max(8)">
+      <math>
+        <mo style="font-family: 'YYReset';">购买最大</mo>
+      </math>
+    </button>
+    <br>
+    <button name="stop" type="button" class="stop" onmousedown="_stop = !_stop;
+    update_y();update_y2n()">
+      <mo style="font-family: 'YYReset';">暂停游戏</mo>
+    </button>
+  </p>
+</body>
+</html>
